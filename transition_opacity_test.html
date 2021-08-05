@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>css transition opacity</title>
+<style>
+div
+{
+    opacity:1;
+    transition:opacity 1s cubic-bezier(.19,1,.22,1);
+    background-color:#ddeaff;
+    padding:30px;
+}
+pre
+{
+    padding:10px;
+    border:1px dotted #000;
+    background-color:#fafafa;
+}
+</style>
+<script>
+window.addEventListener('load', function()
+{
+    var bHidden = false;
+    var btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function()
+    {
+        var myDiv = document.getElementById('myDiv');
+
+        if(!bHidden)
+        {
+            myDiv.style.opacity = '0';
+            bHidden = true;
+        }
+        else
+        {
+            myDiv.style.opacity = '1';
+            bHidden = false;
+        }
+    });
+});
+</script>
+</head>
+<body>
+<pre>
+&lt;style&gt;
+div
+{
+    opacity:1;
+    transition:opacity 1s cubic-bezier(.19,1,.22,1);
+}
+&lt;/style&gt;
+
+&lt;script&gt;
+window.addEventListener('load', function()
+{
+    var bHidden = false;
+    var btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function()
+    {
+        var myDiv = document.getElementById('myDiv');
+
+        if(!bHidden)
+        {
+            myDiv.style.opacity = '0';
+            bHidden = true;
+        }
+        else
+        {
+            myDiv.style.opacity = '1';
+            bHidden = false;
+        }
+    });
+});
+&lt;/script&gt;
+</pre>
+    <div id="myDiv">This DIV fades in and out</div>
+    <p>&nbsp;</p>
+    <button id="btn">Click</button>
+</body>
+</html>
+
